@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2F59B3">
+  <title>Внутри кадра — концепт приложения Киностудии Горького</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="showcase">
+    <aside class="showcase__brief" aria-label="Описание прототипа">
+      <img class="showcase__logo" src="assets/logo-white.svg" alt="Киностудия Горького">
+      <div class="showcase__copy">
+        <p class="eyebrow eyebrow--light">Концепт · 02.09.2026</p>
+        <h1>Экскурсия<br>становится<br>вашим фильмом</h1>
+        <p>Шесть сцен внутри павильона. Каждая завершённая точка превращается в кадр персональной афиши.</p>
+      </div>
+      <div class="showcase__legend">
+        <span><i class="dot dot--red"></i> действие</span>
+        <span><i class="dot dot--white"></i> история</span>
+        <span><i class="dot dot--muted"></i> следующий кадр</span>
+      </div>
+    </aside>
+
+    <main class="device" aria-label="Кликабельный прототип мобильного приложения">
+      <div class="device__speaker" aria-hidden="true"></div>
+      <header class="app-header">
+        <button class="icon-button" id="backButton" type="button" aria-label="Назад" hidden>
+          <span aria-hidden="true">←</span>
+        </button>
+        <img src="assets/logo-color.svg" alt="Киностудия Горького" class="app-header__logo">
+        <button class="icon-button" id="resetButton" type="button" aria-label="Начать заново" title="Начать заново">
+          <span aria-hidden="true">↻</span>
+        </button>
+      </header>
+
+      <div class="film-progress" id="filmProgress" aria-label="Прогресс экскурсии"></div>
+      <section id="app" class="app" aria-live="polite"></section>
+
+      <nav class="bottom-nav" id="bottomNav" aria-label="Основная навигация" hidden>
+        <button type="button" data-nav="route"><span aria-hidden="true">▦</span>Маршрут</button>
+        <button type="button" data-nav="scene"><span aria-hidden="true">●</span>Сейчас</button>
+        <button type="button" data-nav="poster"><span aria-hidden="true">▣</span>Афиша</button>
+      </nav>
+    </main>
+  </div>
+
+  <canvas id="posterCanvas" width="1080" height="1350" hidden></canvas>
+  <script src="app.js"></script>
+</body>
+</html>

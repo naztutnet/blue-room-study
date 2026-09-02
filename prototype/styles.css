@@ -63,9 +63,9 @@ input:focus-visible {
 .showcase {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: minmax(420px, 1fr) minmax(420px, 0.9fr);
+  grid-template-columns: minmax(0, 1fr) minmax(390px, 430px);
   align-items: center;
-  gap: 56px;
+  gap: clamp(32px, 4vw, 56px);
   max-width: 1280px;
   margin: 0 auto;
   padding: 48px 64px;
@@ -97,10 +97,11 @@ input:focus-visible {
 
 .showcase__copy h1 {
   margin: 16px 0 22px;
+  max-width: 680px;
   font-family: "RF Dewi Expanded", Arial, sans-serif;
-  font-size: clamp(52px, 6.2vw, 94px);
-  line-height: .86;
-  letter-spacing: -.055em;
+  font-size: clamp(44px, 5vw, 72px);
+  line-height: .9;
+  letter-spacing: -.045em;
   text-transform: uppercase;
 }
 

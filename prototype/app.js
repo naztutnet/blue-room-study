@@ -1,10 +1,10 @@
 const scenes = [
-  { id: 1, title: "Первый кадр", promise: "От «Руси» до Киностудии", time: "2 мин", image: "assets/hero-01.jpg", type: "choice", question: "С какой точки начнём историю?", options: ["1915 · Товарищество «Русь»", "1939 · Здание студии", "1948 · Имя Горького"] },
-  { id: 2, title: "Камера видит иначе", promise: "Выберите крупность плана", time: "2 мин", image: "assets/museum.jpg", type: "choice", question: "Что станет главным в вашем кадре?", options: ["Деталь", "Герой", "Пространство"] },
-  { id: 3, title: "Костюм рассказывает", promise: "Прочитайте характер героя", time: "2 мин", image: "assets/hero-02.jpg", type: "choice", question: "Что эта деталь говорит о персонаже?", options: ["Власть", "Тайна", "Свобода"] },
-  { id: 4, title: "Звук создаёт мир", promise: "Измените настроение сцены", time: "3 мин", image: "assets/hero-03.jpg", type: "sound", question: "Как прозвучит ваш эпизод?", options: ["Проектор", "Дождь", "Шаги"] },
-  { id: 5, title: "Внутри павильона", promise: "Разберите кадр по слоям", time: "2 мин", image: "assets/museum.jpg", type: "layers", question: "Включите минимум два слоя", options: ["Камера", "Свет", "Декорация"] },
-  { id: 6, title: "Ваш титр", promise: "Выберите роль в киногруппе", time: "3 мин", image: "assets/about-02.jpg", type: "final", question: "Кем вы будете в своём фильме?", options: ["Режиссёр", "Оператор", "Художник", "Звукорежиссёр"] }
+  { id: 1, title: "Первый кадр", promise: "От «Руси» до Киностудии", time: "2 мин", image: "assets/hero-01.jpg", type: "choice", question: "С какой даты начнём?", options: ["1915 · Товарищество «Русь»", "1939 · Здание студии", "1948 · Имя Горького"] },
+  { id: 2, title: "Камера видит иначе", promise: "Найдите границу кадра", time: "2 мин", image: "assets/museum.jpg", type: "choice", question: "Что оставим в кадре?", options: ["Деталь", "Герой", "Пространство"] },
+  { id: 3, title: "Костюм рассказывает", promise: "Рассмотрите героя", time: "2 мин", image: "assets/hero-02.jpg", type: "choice", question: "Что выдаёт эта деталь?", options: ["Власть", "Тайна", "Свобода"] },
+  { id: 4, title: "Звук создаёт мир", promise: "Послушайте сцену", time: "3 мин", image: "assets/hero-03.jpg", type: "sound", question: "Как звучит ваш эпизод?", options: ["Проектор", "Дождь", "Шаги"] },
+  { id: 5, title: "Внутри павильона", promise: "Соберите сцену", time: "2 мин", image: "assets/museum.jpg", type: "layers", question: "Включите хотя бы два слоя", options: ["Камера", "Свет", "Декорация"] },
+  { id: 6, title: "Ваш титр", promise: "Найдите своё место в группе", time: "3 мин", image: "assets/about-02.jpg", type: "final", question: "Кем вы будете в своём фильме?", options: ["Режиссёр", "Оператор", "Художник", "Звукорежиссёр"] }
 ];
 
 const initialState = {
@@ -70,34 +70,34 @@ function homeTemplate() {
   return `
     <div class="screen screen--flush">
       <div class="hero">
-        <span class="hero__recording">Маршрут готов к записи</span>
-        <p class="eyebrow eyebrow--light">Цифровая экскурсия · концепт</p>
+        <span class="hero__recording">Можно начинать</span>
+        <p class="eyebrow eyebrow--light">Пробный маршрут · 6 сцен</p>
         <h2>Внутри<br>кадра</h2>
-        <p>Шесть сцен, в которых вы смотрите на Киностудию глазами киногруппы.</p>
+        <p>Вы посмотрите на студию глазами съёмочной группы. Где-то нужен выбор, где-то — хороший слух.</p>
       </div>
       <div class="panel">
         <div class="visit-card">
-          <strong>Демо‑визит</strong><span class="visit-card__badge">≈ 14 мин</span>
-          <p>Историческая площадка · точный павильон и маршрут согласуются с Киностудией.</p>
+          <strong>Пробный маршрут</strong><span class="visit-card__badge">около 14 мин</span>
+          <p>Точный павильон выберем вместе со студией. Пока тут собрана рабочая версия пути.</p>
         </div>
-        <button class="primary-button" type="button" data-action="start">Начать путешествие</button>
-        <p class="small muted">Прототип использует демонстрационный маршрут и публичные материалы.</p>
+        <button class="primary-button" type="button" data-action="start">Начать маршрут</button>
+        <p class="small muted">Фото взяты с открытых страниц студии. Сам маршрут пока пробный.</p>
       </div>
     </div>`;
 }
 
 function interestTemplate() {
   const items = [
-    ["Истории фильмов", "Главные картины и люди", "◫"],
-    ["Кинопрофессии", "Как работает съёмочная группа", "◎"],
-    ["Костюм", "Образ героя через детали", "◇"],
-    ["Технологии", "Камера, свет и виртуальная студия", "⌁"]
+    ["Истории фильмов", "Фильмы и люди студии", "◫"],
+    ["Кинопрофессии", "Кто и как собирает сцену", "◎"],
+    ["Костюм", "Как деталь выдаёт героя", "◇"],
+    ["Технологии", "Камера, свет, звук и виртуальная студия", "⌁"]
   ];
   return `
     <div class="screen">
-      <p class="eyebrow">Настройка маршрута</p>
-      <h2>Что вам интереснее?</h2>
-      <p class="muted">Выбор повлияет на подсказки и финальную рекомендацию.</p>
+      <p class="eyebrow">Ваш маршрут</p>
+      <h2>Куда смотреть внимательнее?</h2>
+      <p class="muted">Выберите одну тему. По пути она будет всплывать чаще (остальные никуда не денутся).</p>
       <div class="choice-grid">
         ${items.map(([title, text, icon]) => `
           <button class="choice ${state.interest === title ? "is-selected" : ""}" type="button" data-interest="${title}">
@@ -105,7 +105,7 @@ function interestTemplate() {
             <span><strong>${title}</strong><small>${text}</small></span>
           </button>`).join("")}
       </div>
-      <button class="primary-button" type="button" data-action="continue" ${state.interest ? "" : "disabled"}>Показать маршрут</button>
+      <button class="primary-button" type="button" data-action="continue" ${state.interest ? "" : "disabled"}>Собрать маршрут</button>
     </div>`;
 }
 
@@ -114,9 +114,9 @@ function routeTemplate() {
   return `
     <div class="screen screen--flush">
       <div class="route-head">
-        <p class="eyebrow eyebrow--light">Ваш интерес · ${state.interest || "Кино"}</p>
-        <h2>Шесть сцен<br>одного фильма</h2>
-        <p>${state.completed.length} из 6 кадров уже в монтажной ленте</p>
+        <p class="eyebrow eyebrow--light">Тема · ${state.interest || "Кино"}</p>
+        <h2>Шесть сцен<br>внутри кадра</h2>
+        <p>${state.completed.length} из 6 уже в вашей ленте</p>
       </div>
       <div class="route-list">
         ${scenes.map(scene => {
@@ -137,7 +137,7 @@ function sceneTemplate(scene) {
     <div class="screen screen--flush">
       <div class="scene-image">
         <img src="${scene.image}" alt="${scene.title}">
-        <span class="scene-image__label">Сцена ${String(scene.id).padStart(2, "0")} · Концепция</span>
+        <span class="scene-image__label">Сцена ${String(scene.id).padStart(2, "0")} · Пробный маршрут</span>
       </div>
       <div class="scene-body">
         <div class="scene-body__meta"><span>${scene.promise}</span><span>${scene.time}</span></div>
@@ -151,12 +151,12 @@ function sceneTemplate(scene) {
 
 function sceneIntro(id) {
   return {
-    1: "История студии начинается в 1915 году с товарищества «Русь». Выберите временную точку — экскурсовод откроет связанный с ней поворот.",
-    2: "Одна и та же площадка рассказывает разные истории — всё решает граница кадра.",
-    3: "Художник по костюмам проектирует не одежду, а характер, эпоху и движение героя.",
-    4: "Закройте глаза на секунду: звук способен превратить нейтральный кадр в ожидание, тревогу или движение.",
-    5: "Съёмочный павильон — система слоёв. Включайте их по одному, чтобы увидеть работу команды.",
-    6: "Фильм начинается с решения: какую роль вы берёте на себя и как назовёте историю?"
+    1: "Всё началось в 1915 году с товарищества «Русь». Выберите дату — тут у каждой свой поворот.",
+    2: "Граница кадра меняет смысл сцены. Что оставим внутри?",
+    3: "Костюм выдаёт характер героя, его эпоху, привычки и способ двигаться. Посмотрите на деталь.",
+    4: "На секунду закройте глаза. Один звук — и спокойный кадр уже тревожит.",
+    5: "В павильоне всё работает вместе: камера, свет, декорация и люди. Включите слои по одному.",
+    6: "Сначала выберите свою работу в кадре. Потом дайте фильму имя — первое, которое пришло в голову."
   }[id];
 }
 
@@ -177,7 +177,7 @@ function interactionTemplate(scene) {
 
 function completeButton(scene, forcedDisabled = false) {
   const disabled = forcedDisabled || !state.answers[scene.id];
-  const label = scene.id === 5 ? "Добавить кадр в ленту" : "Зафиксировать выбор";
+  const label = scene.id === 5 ? "Добавить в ленту" : "Сохранить кадр";
   return `<button class="primary-button" type="button" data-action="complete" ${disabled ? "disabled" : ""}>${label}</button>`;
 }
 
@@ -189,17 +189,17 @@ function posterTemplate() {
         <div class="poster__top"><span>Киностудия Горького</span><span>Мой фильм · 2026</span></div>
         <h2>${escapeHtml(state.movieTitle)}</h2>
         <p class="poster__role">${role} · ${state.interest || "Мир кино"}</p>
-        <div class="poster__credit"><span>6 сцен внутри кадра<br>Историческая площадка</span><span class="poster__mark">КГ</span></div>
+        <div class="poster__credit"><span>6 сцен<br>Один ваш фильм</span><span class="poster__mark">КГ</span></div>
       </div>
       <div class="poster-actions">
-        <button class="secondary-button" type="button" data-action="download">Скачать</button>
-        <button class="primary-button" type="button" data-action="share">Поделиться</button>
+        <button class="secondary-button" type="button" data-action="download">Скачать афишу</button>
+        <button class="primary-button" type="button" data-action="share">Поделиться афишей</button>
       </div>
       <div class="panel">
-        <p class="eyebrow">Продолжить знакомство</p>
+        <p class="eyebrow">Что посмотреть дальше</p>
         <h3>${recommendation()}</h3>
-        <p class="muted small">Рекомендация сформирована по выбранному интересу. В рабочей версии ведёт на действующую билетную страницу.</p>
-        <button class="secondary-button" type="button" data-action="tickets">Посмотреть программу</button>
+        <p class="muted small">Вот программа по вашей теме. Пока кнопка показывает сценарий (в рабочей версии она откроет билеты).</p>
+        <button class="secondary-button" type="button" data-action="tickets">Открыть программу</button>
       </div>
     </div>`;
 }
@@ -241,7 +241,7 @@ function bindCurrentView() {
   });
   app.querySelector('[data-action="download"]')?.addEventListener("click", downloadPoster);
   app.querySelector('[data-action="share"]')?.addEventListener("click", sharePoster);
-  app.querySelector('[data-action="tickets"]')?.addEventListener("click", () => showToast("В рабочей версии откроется билетная страница"));
+  app.querySelector('[data-action="tickets"]')?.addEventListener("click", () => showToast("Тут откроется билетная страница"));
 }
 
 function completeCurrentScene() {
@@ -258,7 +258,7 @@ function goBack() {
 
 backButton.addEventListener("click", goBack);
 resetButton.addEventListener("click", () => {
-  if (window.confirm("Начать демонстрационный маршрут заново?")) {
+  if (window.confirm("Сбросить маршрут и начать сначала?")) {
     localStorage.removeItem("gorky-tour-state");
     state = { ...initialState, completed: [], answers: {} };
     render();
@@ -268,7 +268,7 @@ resetButton.addEventListener("click", () => {
 bottomNav.addEventListener("click", event => {
   const button = event.target.closest("button[data-nav]");
   if (!button) return;
-  if (button.dataset.nav === "poster" && !state.completed.includes(6)) return showToast("Афиша откроется после шестой сцены");
+  if (button.dataset.nav === "poster" && !state.completed.includes(6)) return showToast("Сначала пройдите шесть сцен. Потом откроется афиша.");
   if (button.dataset.nav === "scene") {
     const firstOpen = Math.min(6, state.completed.length + 1);
     return setState({ view: "scene", currentScene: firstOpen });
@@ -278,7 +278,7 @@ bottomNav.addEventListener("click", event => {
 
 function playSound(index) {
   const AudioContext = window.AudioContext || window.webkitAudioContext;
-  if (!AudioContext) return showToast("Звук не поддерживается этим браузером");
+  if (!AudioContext) return showToast("Этот браузер не воспроизводит звук. Попробуйте другой.");
   const ctx = new AudioContext();
   const now = ctx.currentTime;
   if (index === 0) {
@@ -319,7 +319,7 @@ async function downloadPoster() {
   ctx.font = "34px Arial"; ctx.fillText(`${state.answers[6] || "Автор фильма"} · ${state.interest || "Мир кино"}`, 70, 1110);
   ctx.font = "26px Arial"; ctx.fillText("6 СЦЕН ВНУТРИ КАДРА · 2026", 70, 1250);
   const link = document.createElement("a"); link.download = "moy-film-gorky-studio.png"; link.href = canvas.toDataURL("image/png"); link.click();
-  showToast("Афиша сохранена");
+  showToast("Афиша скачана");
 }
 
 function wrapCanvasText(ctx, text, x, y, maxWidth, lineHeight) {
@@ -336,9 +336,9 @@ async function sharePoster() {
   const text = `Мой фильм на Киностудии Горького: «${state.movieTitle}». Роль — ${state.answers[6] || "автор"}.`;
   try {
     if (navigator.share) await navigator.share({ title: "Внутри кадра", text });
-    else { await navigator.clipboard.writeText(text); showToast("Текст для публикации скопирован"); }
+    else { await navigator.clipboard.writeText(text); showToast("Текст скопирован"); }
   } catch (error) {
-    if (error.name !== "AbortError") showToast("Не удалось открыть меню публикации");
+    if (error.name !== "AbortError") showToast("Меню не открылось. Попробуйте ещё раз.");
   }
 }
 
